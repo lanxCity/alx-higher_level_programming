@@ -1,0 +1,16 @@
+-> The modulo operation, represented by the `%` symbol, calculates the remainder of the 
+division of one number by another. In the case of `-14 % 10`, it's asking for the remainder 
+when -14 is divided by 10.
+
+Here's how it works:
+- Divide -14 by 10, which equals -1 with a remainder of -4.
+- However, in most programming languages, when you perform a modulo operation with a 
+negative number, the result is taken from the range of the divisor, which is 0 to 9 in this case.
+
+So, `-14 % 10` would give us a remainder of **6**, because if you add 10 to -4 (the initial remainder), you get 6, which is within the range of 0 to 9.
+
+In mathematical notation:
+
+$$ -14 \mod 10 = 6 $$
+
+This ensures the result of the modulo operation is always non-negative when the divisor is positive.
