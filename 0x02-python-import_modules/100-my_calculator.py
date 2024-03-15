@@ -8,8 +8,8 @@ if __name__ == "__main__":
         exit(1)
 
     if argv[2] not in "+-*/":
-        print("{}".format("Unknown operator. Available operators: \
-                +, -, * and /"))
+        print("{}".format("Unknown operator. Available operators: " \
+                "+, -, * and /"))
         exit(1)
 
     a = int(argv[1])
