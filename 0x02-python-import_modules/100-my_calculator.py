@@ -9,8 +9,7 @@ if __name__ == "__main__":
 
     if argv[2] not in "+-*/":
         print(
-                "{}".format("Unknown operator. Available operator"
-                "+, -, * and /")
+                "{}".format("Unknown operator. Available operator +, -, * and /")
                 )
         exit(1)
 
