@@ -4,11 +4,11 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
     if len(argv) != 4:
-        print("{}".format("Usage: ./100-my_calculator.py <a> <operator> <b>\n1"))
+        print("{}".format("Usage: ./100-my_calculator.py <a> <operator> <b>"))
         exit(1)
 
     if argv[2] not in "+-*/":
-        print("{}".format("Unknown operator. Available operators: +, -, * and /\n1"))
+        print("{}".format("Unknown operator. Available operators: +, -, * and /"))
         exit(1)
 
     a = int(argv[1])
@@ -21,5 +21,5 @@ if __name__ == "__main__":
     operation_index = valid_operator.index(operator)
     ans = operations[operation_index](a, b)
 
-    print("{} {} {} = {}\n0".format(a, operator, b, ans))
+    print("{} {} {} = {}".format(a, operator, b, ans))
     exit(0)
