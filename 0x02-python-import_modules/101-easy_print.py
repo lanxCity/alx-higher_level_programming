@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-exec("print('#pythoniscool')")
+[print('#pythoniscool') for _ in range(1)]
