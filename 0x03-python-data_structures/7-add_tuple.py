@@ -4,7 +4,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     max_tuple = max(len(tuple_a), len(tuple_b))
 
     if max_tuple == 0:
-        return (0, 0)
+        return 0
 
     if len(tuple_a) == 0:
         if tuple_b == 1:
