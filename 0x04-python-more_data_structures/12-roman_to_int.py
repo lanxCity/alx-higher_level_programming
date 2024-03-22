@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def roman_to_int(roman_string):
     roman_to_int = {
             'I': 1, 'V': 5,
@@ -14,11 +15,10 @@ def roman_to_int(roman_string):
             print("Invalid")
             return (0)
 
-        user_input = roman_string
-        input_len = len(user_input)
-        total = 0
-        next_is_removed = False
-        
+    user_input = roman_string
+    input_len = len(user_input)
+    total = 0
+    next_is_removed = False
     for i in range(len(user_input)):
         if next_is_removed:
             next_is_removed = False
@@ -29,7 +29,7 @@ def roman_to_int(roman_string):
 
         if ((i + 1) < input_len):
             next_roman = user_input[i + 1]
-        
+
         if next_roman not in roman_to_int or (
                 roman_to_int[curr] >= roman_to_int[next_roman]):
             total += roman_to_int[curr]
