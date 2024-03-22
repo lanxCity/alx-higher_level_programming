@@ -10,9 +10,6 @@ def roman_to_int(roman_string):
     if not roman_string:
         return (0)
 
-    non_2_times = ""
-    count = 0
-
     for i in roman_string:
         if i not in roman_to_int:
             return (0)
@@ -30,10 +27,10 @@ def roman_to_int(roman_string):
         curr = user_input[i]
         next_roman = 0
 
-        if ((i + 1) < input_len):
+        if (i + 1) < input_len:
             next_roman = user_input[i + 1]
 
-        if next_roman not in roman_to_int or (
+        if not next_roman or (
                 roman_to_int[curr] >= roman_to_int[next_roman]):
             total += roman_to_int[curr]
         else:
