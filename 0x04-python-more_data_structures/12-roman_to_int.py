@@ -12,13 +12,13 @@ def roman_to_int(roman_string):
 
     for i in roman_string:
         if i not in roman_to_int:
-            print("Invalid")
             return (0)
 
     user_input = roman_string
     input_len = len(user_input)
     total = 0
     next_is_removed = False
+
     for i in range(len(user_input)):
         if next_is_removed:
             next_is_removed = False
