@@ -14,12 +14,8 @@ def roman_to_int(roman_string):
     count = 0
 
     for i in roman_string:
-        if i not in roman_to_int or (
-                i in "VLD" and roman_string[count + 1] == i):
-
+        if i not in roman_to_int:
             return (0)
-        
-        count += 1
 
     user_input = roman_string
     input_len = len(user_input)
