@@ -4,7 +4,8 @@ class square:
     A class representing a square shape.
 
     This class provides a blueprint for creating square objects.
-    Squares are geometric shapes with four equal sides and four right angles.
+    Squares are geometric shapes with four equal sides
+    and four right angles.
 
     Attributes:
         None
