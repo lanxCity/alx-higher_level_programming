@@ -23,11 +23,6 @@ class Square:
             positon (tuple): Position of "my_print" function
             with x, y coordinate
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-
         self.__size = size
         self.__position = position
 
@@ -46,20 +41,14 @@ class Square:
 
     @property
     def position(self):
+        """tuple: position of the square"""
         return self.__position
 
     @position.setter
     def position(self, value):
 
-        def is_int(data):
-            """To validate each value of an array as integer"""
-            for i in data:
-                if not isinstance(i, int) or i < 0:
-                    return False
-            return True
-
-        if not isinstance(value, tuple) or\
-                not is_int(value):
+        if not isinstance(value, tuple) or len(value) != 2 or \
+                not all(isinstance(num, int) and num >= 0 for num in value):
 
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -71,9 +60,9 @@ class Square:
     def my_print(self):
         if self.size == 0:
             print()
+            return
 
-        x_axis = self.position[0]
-        y_axis = self.position[1]
+        x_axis, y_axis = self.position
 
         # For y-axis
         if y_axis <= 1:
@@ -82,4 +71,4 @@ class Square:
 
         # For x-axis
         for _ in range(self.size):
-            print((' ' * x_axis), ('#' * self.size), sep='')
+            print(' ' * x_axis + '#' * self.size)
