@@ -65,10 +65,10 @@ class Square:
         x_axis, y_axis = self.position
 
         # For y-axis
-        if y_axis <= 1:
-            for _ in range(y_axis):
-                print()
+        #if y_axis <= 1:
+        for _ in range(y_axis):
+            print()
 
         # For x-axis
         for _ in range(self.size):
-            print(' ' * x_axis + '#' * self.size)
+            print((' ' * x_axis) + ('#' * self.size))
