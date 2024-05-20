@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-class square:
+""" Intro to python object oriented programming """
+
+
+class Square:
     """
     A class representing a square shape.
 
