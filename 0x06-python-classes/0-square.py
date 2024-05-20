@@ -1,9 +1,19 @@
 #!/usr/bin/python3
-class Square:
-    """ this is an empty class
-    Avoiding the Esc key
-    >>If you have an American English keyboard, pressing Ctrl-[
-    (control plus left square bracket) is equivalent to pressing Esc
-    This provides an easy way to exit from insert mode.
+class square:
     """
-    pass
+    A class representing a square shape.
+
+    This class provides a blueprint for creating square objects.
+    Squares are geometric shapes with four equal sides and four right angles.
+
+    Attributes:
+        None
+    """
+
+    def __init__(self):
+        """
+        Initializes a new Square object.
+        Args:
+            None
+        """
+        pass
