@@ -54,13 +54,13 @@ class Square:
         def is_int(data):
             """To validate each value of an array as integer"""
             for i in data:
-                if not isinstance(i, int):
+                if not isinstance(i, int) or i < 0:
                     return False
             return True
 
         if not isinstance(value, tuple) or\
                 len(value) != 2 or\
-                not is_true(value):
+                not is_int(value):
 
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -77,7 +77,7 @@ class Square:
         y_axis = self.position[1]
 
         # For y-axis
-        if 0 < y_axis <= 1:
+        if y_axis <= 1:
             for _ in range(y_axis):
                 print()
 
