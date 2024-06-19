@@ -6,7 +6,7 @@ const myArgv = process.argv;
 const realArgs = myArgv.slice(2);
 let realArgsCopy = realArgs.slice(0);
 
-if (realArgs.length <= 2) {
+if (myArgv.length <= 3) {
   console.log(0);
 } else {
   function findHighestNumber (arr) {
