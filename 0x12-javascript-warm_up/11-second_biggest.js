@@ -4,6 +4,7 @@ const myArgv = process.argv;
 
 // copy elements from index 2 to the end
 const realArgs = myArgv.slice(2);
+let realArgsCopy = realArgs.slice(0);
 
 if (realArgs <= 1) {
   console.log(0);
@@ -23,20 +24,16 @@ if (realArgs <= 1) {
 
   // To keep track biggest integer needed, either first, second, etc.
   let counter = 0;
-  const biggestIntPosition = 3;
+  const biggestIntPosition = 2;
   let highest;
 
   while (counter < biggestIntPosition) {
     counter++;
-    highest = findHighestNumber(realArgs);
+    highest = findHighestNumber(realArgsCopy);
 
     if (counter === biggestIntPosition) break;
 
-    for (const i in realArgs) {
-      if (realArgs[i] === highest) {
-        realArgs.splice(i, 1);
-      }
-    }
+    realArgsCopy = realArgsCopy.filter(el => el !== highest);
   }
   console.log(highest);
 }
