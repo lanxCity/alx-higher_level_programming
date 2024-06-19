@@ -35,7 +35,6 @@ if (myArgv.length <= 3) {
 
     realArgsCopy = realArgsCopy.filter(el => el !== highest);
 
-    if (!realArgsCopy.length) break; 
   }
   console.log(highest);
 }
