@@ -1,18 +1,18 @@
 #!/usr/bin/node
 
-const Rectangle = require('./4-rectangle');
+const SquareBase = require('./5-square');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends SquareBase {
   /**
    * prints the rectangle using the character c
    * If c is undefined, use the character X
    */
   charPrint (c) {
-    !c ? super.print() : super.print(c);
+    const line = !c ? 'X' : c;
+
+    for (let i = 0; i < this.width; i++) {
+      console.log(line.repeat(this.width));
+    }
   }
 }
 
