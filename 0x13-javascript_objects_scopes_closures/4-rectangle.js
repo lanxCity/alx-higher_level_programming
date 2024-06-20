@@ -12,13 +12,7 @@ class Rectangle {
    * Prints the rectangle using the character X
    */
   print () {
-    for (let i = 0; i < this.height; i++) {
-      let line = '';
-      for (let j = 0; j < this.width; j++) {
-        line += 'X';
-      }
-      console.log(line);
-    }
+    Rectangle.drawPlaneShape(this.width, this.height);
   }
 
   /**
@@ -34,6 +28,20 @@ class Rectangle {
   double () {
     this.width *= 2;
     this.height *= 2;
+  }
+
+  /**
+   * It draws any plane shape with two side
+   */
+  
+  static drawPlaneShape (w, h) {
+    for (let i = 0; i < h; i++) {
+      let line = '';
+      for (let j = 0; j < w; j++) {
+        line += 'X';
+      }
+      console.log(line);
+    }
   }
 }
 
