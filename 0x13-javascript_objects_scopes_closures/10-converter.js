@@ -1,17 +1,18 @@
 #!/usr/bin/node
 
 exports.converter = function (base) {
-  const hexExceptions = {
-    10: 'a',
-    11: 'b',
-    12: 'c',
-    13: 'd',
-    14: 'e',
-    15: 'f'
-  };
-
+  /**
+   * const hexExceptions = {
+   * 10: 'a',
+   * 11: 'b',
+   * 12: 'c',
+   * 13: 'd',
+   * 14: 'e',
+   * 15: 'f'
+   * };
+   */
   function convert (value) {
-    if (value < base) {
+    /** if (value < base) {
       return value in hexExceptions ? hexExceptions[value] : value;
     }
 
@@ -21,6 +22,8 @@ exports.converter = function (base) {
     const constant = Math.floor(value / base);
 
     return String(convert(constant)) + String(remainder);
+    */
+    return value.toString(base);
   }
   return convert;
 };
