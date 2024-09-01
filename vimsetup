@@ -1,0 +1,26 @@
+" Set line number "
+set number
+
+" Enable filetype detection
+filetype on
+
+" Enable plugins and indentation based on the detected filetype
+filetype plugin indent on
+
+" Enable automatic indentation "
+set autoindent
+
+" Copy the indentation from the previous line "
+set smartindent
+
+" Use smart tabbing "
+set smarttab
+
+" Set the number of spaces that a <Tab> counts for "
+set tabstop=4
+
+" Set the number of spaces to use for each step of (auto)indent "
+set shiftwidth=4
+
+" Convert tabs to spaces "
+set expandtab
