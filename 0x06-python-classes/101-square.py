@@ -96,7 +96,6 @@ class Square:
 
         # For x-axis
         for _ in range(self.size):
-            sqr_board += f'{' ' * x_axis}{'#' * self.size}\n'
+            sqr_board += f"{' ' * x_axis}{'#' * self.size}\n"
 
         return sqr_board
-
