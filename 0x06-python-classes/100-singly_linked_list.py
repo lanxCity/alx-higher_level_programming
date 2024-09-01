@@ -10,7 +10,7 @@ class Node:
 
     Attributes:
         __data (int): node data
-        __next_node Node: Node obj
+        __next_node (Node): Node obj
     """
 
     def __init__(self, data, next_node=None):
@@ -20,17 +20,17 @@ class Node:
             data (int): node data
             next_node (Node): Node obj
         """
-        self.data = data
-        self.next_node = next_node
+        # For data
+        if not isinstance(data, int):
+            raise TypeError("data must be an integer")
 
-    # def __repr__(self):
-    #    return '{}'.format(self.__data)
+        self.__data = data
+        self.__next_node = next_node
 
-    # For data
     @property
     def data(self):
         """ int: node data"""
-        return '{:d}'.format(self.__data)
+        return self.__data
 
     @data.setter
     def data(self, value):
@@ -52,29 +52,100 @@ class Node:
 
         raise TypeError("next_node must be a Node object")
 
-class SinglyLinkedList:
-    li = []
 
+class SinglyLinkedList:
+    """
+    A singly list class
+
+    This class provides a blueprint for ssl obj
+    with head node obj
+
+    Attributes:
+        __head (Node): Node obj
+    """
     def __init__(self):
-        self.__head = 0
+        """
+        Initialize the SinglyLinkedList obj
+
+        Attributes:
+            __head (Node): Node obj
+        """
+        self.__head = None
 
     def __repr__(self):
-        nodes_li = ''
+        """ str: str representation of singly list  """
+        # Sort nodes
+        self.sort()
 
-        for i in SinglyLinkedList.li:
-         #   nodes += '{:d}\n'.format(n.data)
-            print(i.data)
+        # printing
+        data = ''
+        node = self.__head
+        while node.next_node:
+            data += f'{node.data}\n'
+            node = node.next_node
 
-        #return nodes
+        data += f'{node.data}'
+        return data
 
-    def sorted_insert(self, value):
-        SinglyLinkedList.li.append(Node(value))
+    def sorted_insert(self, new_data):
+        """ int: new node data """
+        new_node = Node(new_data)
 
-        # Convert to int and sort
-        new_nodes = [n.data for n in  SinglyLinkedList.li]
+        # for first node
+        if not self.__head:
+            self.__head = new_node
+            return
 
-        sorted_n = 
-        print(new_nodes)
+        # Adding of new node
+        current = self.__head
+        while current.next_node:
+            current = current.next_node
+
+        current.next_node = new_node
+        return
+
+    def sort(self):
+        """ int: sort data """
+
+        # Storing all nodes in a list
+        raw_nodes = []
+        current = self.__head
+        while True:
+            raw_nodes.append(current)
+            if not current.next_node:
+                break
+            current = current.next_node
+
+        # Sorting
+        sorted_nodes = []
+        while len(raw_nodes):
+            least = raw_nodes[0]
+            for n in raw_nodes:
+                if n.data <= least.data:
+                    least = n
+            sorted_nodes.append(least)
+            raw_nodes.remove(least)
+
+        # Re-arrange into the node
+        counter = 0
+        self.__head = sorted_nodes[counter]
+        current = self.__head
+
+        while counter < len(sorted_nodes):
+            if counter < len(sorted_nodes) - 1:
+                current.next_node = sorted_nodes[counter + 1]
+                # new current node
+                current = sorted_nodes[counter + 1]
+
+            else:
+                current.next_node = None
+
+            counter += 1
+
+        return
+
+
+
 
 
 
