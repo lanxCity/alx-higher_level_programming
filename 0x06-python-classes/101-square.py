@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Intro to python object oriented programming """
+""" Intro to python object-oriented programming """
 
 
 class Square:
@@ -21,7 +21,7 @@ class Square:
         Args:
             size (int): Size of a square
 
-            positon (tuple): Position of "my_print" function
+            position (tuple): Position of "my_print" function
             with x, y coordinate
         """
         # -> Size
