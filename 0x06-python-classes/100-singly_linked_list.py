@@ -1,6 +1,7 @@
 #!/bin/bash/python3
 """ Write a class Node that defines a node of a singly linked list """
 
+
 class Node:
     """
     A node class for singly linked list
@@ -143,29 +144,3 @@ class SinglyLinkedList:
             counter += 1
 
         return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
