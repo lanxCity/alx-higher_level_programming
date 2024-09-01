@@ -74,6 +74,8 @@ class SinglyLinkedList:
         self.__head = None
 
     def __repr__(self):
+        if not self.__head:
+            return
         """ str: str representation of singly list  """
         # Sort nodes
         self.sort()
