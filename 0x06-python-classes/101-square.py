@@ -85,7 +85,6 @@ class Square:
         sqr_board = ""
 
         if self.size == 0:
-            sqr_board += "\n"
             return sqr_board
 
         x_axis, y_axis = self.position
@@ -95,7 +94,10 @@ class Square:
             sqr_board += "\n"
 
         # For x-axis
-        for _ in range(self.size):
-            sqr_board += f"{' ' * x_axis}{'#' * self.size}\n"
+        for i in range(self.size):
+            sqr_board += f"{' ' * x_axis}{'#' * self.size}"
+
+            if i < self.size - 1:
+                sqr_board += "\n"
 
         return sqr_board
