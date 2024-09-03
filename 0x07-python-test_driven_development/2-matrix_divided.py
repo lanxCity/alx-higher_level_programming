@@ -5,6 +5,14 @@
 
 
 def matrix_divided(matrix, div):
+    """
+    Args:
+        matrix list: A list of lists of integers or floats
+        div int, float: A non-zero number, int or float
+
+    Returns:
+        list: A new matrix divided numbers, rounded in 2 decimal
+    """
     # -> Type error
     if (
             # Empty matrix
