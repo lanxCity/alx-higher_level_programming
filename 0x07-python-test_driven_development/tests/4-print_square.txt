@@ -25,3 +25,9 @@ size must be an integer
 ...     print(e)
 ...
 size must be >= 0
+>>>try:
+...     print_square(None)
+... except Exception as e:
+...     print(e)
+...
+size must be an integer
