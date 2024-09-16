@@ -24,4 +24,3 @@ def print_square(size):
         print('#' * size)
 
     return
-
