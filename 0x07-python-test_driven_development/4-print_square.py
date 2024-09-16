@@ -12,7 +12,7 @@ def print_square(size):
     Returns:
         None
     """
-    if size is None:
+    if not size:
         raise TypeError('size must be an integer')
 
     if ((isinstance(size, float) and size < 0) or
@@ -26,3 +26,4 @@ def print_square(size):
         print('#' * size)
 
     return
+
