@@ -26,7 +26,7 @@ def text_indentation(text):
 
         line += char
 
-        if char in '.?:':
+        if char in ['.', '?', ':']:
             line += '\n'
             print(line)
 
