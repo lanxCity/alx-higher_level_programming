@@ -15,20 +15,22 @@ def text_indentation(text):
     if type(text) is not str:
         TypeError('text must be a string')
 
-    new_line = True
     line = ''
 
     for i in range(len(text)):
         char = text[i]
 
-        if char == ' ' and not line:
-            char = ''
+        if (not line or line[-1] == '\n') and char == ' ':
+            continue
 
         line += char
 
         if char in ['.', '?', ':']:
-            line += '\n'
-            print(line)
+            line += '\n\n'
 
-            line = ''
+    print(line)
+
     return
+
+
+
