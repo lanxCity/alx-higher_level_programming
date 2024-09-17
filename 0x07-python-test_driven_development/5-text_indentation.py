@@ -12,7 +12,7 @@ def text_indentation(text):
     Returns:
         None
     """
-    if type(text) is not str:
+    if not isinstance(text, str):
         TypeError('text must be a string')
 
     line = ''
@@ -28,9 +28,6 @@ def text_indentation(text):
         if char in ['.', '?', ':']:
             line += '\n\n'
 
-    print(line)
+    print(line, end='')
 
     return
-
-
-
