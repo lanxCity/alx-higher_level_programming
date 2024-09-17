@@ -13,3 +13,7 @@ cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
 beatiorem! Iam ruinas videres""")
 
 
+try:
+    text_indentation(2)
+except Exception as e:
+    print(e)
